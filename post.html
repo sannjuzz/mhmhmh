@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FOSS Club Enhanced Logo</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: radial-gradient(circle at center, #0f0c29, #302b63, #24243e);
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      font-family: 'Orbitron', sans-serif;
+      text-transform: uppercase;
+      color: #ffffff;
+      border: 3px solid #00ffe7;
+      border-radius: 20px;
+      padding: 40px 80px;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(40px);
+      box-shadow: 0 0 100px rgba(0,255,231,0.6);
+      animation: fadeIn 1.5s ease forwards, pulse 4s infinite alternate;
+    }
+    .icon {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      background: radial-gradient(circle, #00ffe7, #00c3ff);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 100px rgba(0,255,231,0.8);
+      margin-right: 50px;
+      transition: transform 1s ease;
+    }
+    .icon:hover {
+      transform: rotate(720deg) scale(1.2);
+    }
+    .icon::before {
+      content: '\1F4BB';
+      font-size: 4rem;
+      color: #ffffff;
+      filter: drop-shadow(0 0 25px #00ffe7);
+    }
+    .text {
+      font-size: 5rem;
+      font-weight: 900;
+      letter-spacing: 8px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+    }
+    .text span,
+    .text::before,
+    .text::after {
+      content: '';
+    }
+    .text span,
+    .text::before,
+    .text::after,
+    .text > * {
+      position: relative;
+      display: inline-block;
+    }
+    .text > *:not(span) {
+      padding: 0 10px;
+      text-shadow: 0 0 10px #00ffe7, 0 0 20px #00c3ff;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+    .text > *:hover {
+      color: #00ffe7;
+      transform: scale(1.1);
+    }
+    .text span {
+      width: 100px;
+      height: 100px;
+      border: 5px double #00ffe7;
+      border-radius: 50%;
+      margin: 0 15px;
+      background: radial-gradient(circle, rgba(0,255,231,0.15) 30%, transparent 70%);
+      box-shadow: 0 0 50px #00ffe7, inset 0 0 50px #00c3ff;
+    }
+    .text span::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 40px;
+      height: 40px;
+      border: 2px solid #00ffe7;
+      border-radius: 50%;
+      box-shadow: 0 0 20px #00c3ff;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(-50px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulse {
+      from { box-shadow: 0 0 70px rgba(0,255,231,0.4); }
+      to { box-shadow: 0 0 120px rgba(0,255,231,0.9); }
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <div class="icon"></div>
+    <div class="text"><div>F</div><span></span><div>S</div><div>S</div></div>
+  </div>
+</body>
+</html>
